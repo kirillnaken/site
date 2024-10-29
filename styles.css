@@ -1,119 +1,110 @@
-/* Общие стили */
-body {
-    font-family: 'Poppins', sans-serif;
+/* Сброс стилей */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Стили для хедера */
 header {
-    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
-    color: white;
+    background: linear-gradient(135deg, #6e7f80, #4a5c60);
+    color: #fff;
     padding: 20px 0;
-    text-align: center;
 }
 
 nav {
-    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.3s ease;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #ffdd57;
+    color: #e2e2e2;
 }
 
 h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5rem;
+    margin: 10px 0;
 }
 
 h2 {
-    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+p {
+    margin: 15px 0;
 }
 
-section {
-    margin-bottom: 20px;
-}
-
-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-section ul li {
-    background: #e7f0ff;
-    margin: 10px 0;
-    padding: 15px;
-    border-radius: 5px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-section ul li:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* Стили для формы */
-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-form input:focus, form textarea:focus {
-    border-color: #007bff;
-    outline: none;
-}
-
+/* Кнопка "Связаться с нами" */
 .cta {
     display: inline-block;
-    padding: 10px 20px;
     background: #007bff;
-    color: white;
-    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    text-decoration: none;
+    transition: background 0.3s;
 }
 
 .cta:hover {
     background: #0056b3;
+}
+
+/* Стили для секций */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
 }
