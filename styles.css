@@ -1,10 +1,10 @@
 /* Основные стили */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: #f3f4f6;
+    background: #f7f8fa;
     color: #333;
 }
 
@@ -13,46 +13,67 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px;
+}
+
+/* Навигация */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff7f50;
 }
 
 /* Шапка */
 header {
-    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     padding: 60px 20px;
     text-align: center;
     position: relative;
-    overflow: hidden;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5em;
-    font-family: 'Montserrat', sans-serif;
-    animation: fadeInDown 1s ease;
+    font-weight: 700;
 }
 
 header p {
     font-size: 1.2em;
     margin: 20px 0;
-    animation: fadeInUp 1s ease;
 }
 
 header .cta {
     display: inline-block;
     margin-top: 20px;
     padding: 15px 30px;
-    background: #ff5f6d;
+    background: #ff7f50;
     color: white;
     text-decoration: none;
     border-radius: 30px;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     transition: background 0.3s, transform 0.3s;
 }
 
 header .cta:hover {
-    background: #ff5f6d;
+    background: #ff5f50;
     transform: scale(1.05);
 }
 
@@ -70,6 +91,7 @@ main .card {
     border-radius: 12px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
 }
 
 main .card:hover {
@@ -79,7 +101,16 @@ main .card:hover {
 
 h2 {
     margin-top: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px 0;
 }
 
 /* Футер */
@@ -111,25 +142,23 @@ footer form input, footer form textarea {
     font-size: 1em;
     width: 100%;
     max-width: 400px;
-    border: none;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 footer form button {
     padding: 15px 30px;
-    background: #ff5f6d;
+    background: #ff7f50;
     color: white;
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     transition: background 0.3s, transform 0.3s;
 }
 
 footer form button:hover {
-    background: #ff5f6d;
+    background: #ff5f50;
     transform: scale(1.05);
 }
 
