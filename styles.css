@@ -1,6 +1,6 @@
 /* Основные стили */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Изменяем шрифт на Montserrat */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -49,6 +49,13 @@ header {
     position: relative;
 }
 
+/* Логотип */
+header .logo {
+    width: 150px; /* Ширина логотипа */
+    margin: 0 auto 20px; /* Центрируем логотип */
+}
+
+/* Заголовки */
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -104,6 +111,7 @@ h2 {
     font-weight: 700;
 }
 
+/* Стили для списков */
 ul {
     list-style: none;
     padding: 0;
