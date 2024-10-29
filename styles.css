@@ -8,7 +8,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -20,15 +20,16 @@ body {
 
 /* Стили для хедера */
 header {
-    background: linear-gradient(135deg, #6e7f80, #4a5c60);
-    color: #fff;
+    background: #2c3e50; /* Цвет фона заголовка */
+    color: #ecf0f1; /* Цвет текста */
     padding: 20px 0;
+    text-align: center; /* Центрируем текст */
 }
 
 nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: center; /* Центрируем навигацию */
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -41,14 +42,15 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #ecf0f1;
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s, transform 0.2s; /* Анимация цвета и масштабирования */
 }
 
 nav ul li a:hover {
-    color: #e2e2e2;
+    color: #e67e22; /* Цвет при наведении */
+    transform: scale(1.1); /* Увеличиваем размер ссылки */
 }
 
 h1 {
@@ -58,42 +60,47 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 10px;
+    margin: 20px 0 10px; /* Добавляем отступы */
 }
 
 p {
     margin: 15px 0;
+    font-size: 1rem; /* Размер шрифта для параграфов */
 }
 
 /* Кнопка "Связаться с нами" */
 .cta {
     display: inline-block;
-    background: #007bff;
+    background: #e67e22; /* Цвет кнопки */
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s; /* Анимация кнопки */
 }
 
 .cta:hover {
-    background: #0056b3;
+    background: #d35400; /* Темнее цвет кнопки при наведении */
+    transform: scale(1.05); /* Увеличиваем кнопку */
 }
 
 /* Стили для секций */
+main {
+    padding: 20px 0; /* Добавляем отступы для основного контента */
+}
+
 section {
     margin: 20px 0;
     padding: 20px;
-    background: #fff;
+    background: #fff; /* Цвет фона для секций */
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для секций */
 }
 
 /* Адаптивность */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* Переключаем на столбец для мобильных устройств */
     }
     
     nav ul li {
@@ -101,10 +108,14 @@ section {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2rem; /* Уменьшаем размер заголовка на мобильных */
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Уменьшаем размер подзаголовка на мобильных */
+    }
+
+    .cta {
+        font-size: 1rem; /* Уменьшаем размер кнопки на мобильных */
     }
 }
