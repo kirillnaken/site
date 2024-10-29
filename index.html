@@ -5,36 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Разработка ботов для Telegram и продвижение в SA:MP - Arizona RP Winslow</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Разработка ботов для Telegram и продвижение в SA:MP</h1>
-        <p>Продвигаем ваши организации на сервере Winslow проекта Arizona RP</p>
-        <a href="#contact" class="cta">Связаться с нами</a>
+        <div class="container">
+            <h1>Разработка ботов для Telegram и продвижение в SA:MP</h1>
+            <p>Продвигаем ваши организации на сервере Winslow проекта Arizona RP</p>
+            <a href="#contact" class="cta">Связаться с нами</a>
+        </div>
     </header>
-    <main>
-        <section id="about">
+    <main class="container">
+        <section id="about" class="card">
             <h2>О нас</h2>
             <p>Мы специализируемся на разработке ботов для Telegram и продвижении организаций в игре SA:MP. Наш опыт и знания помогут вам достичь новых высот.</p>
         </section>
-        <section id="services">
+        <section id="services" class="card">
             <h2>Наши услуги</h2>
             <ul>
                 <li>Разработка ботов для Telegram</li>
                 <li>Продвижение организаций в SA:MP</li>
             </ul>
         </section>
-        <section id="portfolio">
+        <section id="portfolio" class="card">
             <h2>Портфолио</h2>
             <p>Смотрите примеры наших работ и отзывы довольных клиентов.</p>
         </section>
     </main>
-    <footer id="contact">
+    <footer id="contact" class="container">
         <h2>Контакты</h2>
         <p>Discord: arkloria</p>
+        <p>Telegram: arkloria</p>
         <form>
             <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required>
+            <label for="discord">Discord:</label>
+            <input type="text" id="discord" name="discord" required>
+            <label for="telegram">Telegram:</label>
+            <input type="text" id="telegram" name="telegram" required>
             <label for="message">Сообщение:</label>
             <textarea id="message" name="message" required></textarea>
             <button type="submit">Отправить</button>
