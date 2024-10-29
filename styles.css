@@ -1,40 +1,28 @@
-/* Сброс стилей */
-* {
+/* Основные стили */
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    background: #f7f8fa;
     color: #333;
 }
 
+/* Контейнер */
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* Стили для хедера */
-header {
-    background: #2c3e50; /* Цвет фона заголовка */
-    color: #ecf0f1; /* Цвет текста */
-    padding: 20px 0;
-    text-align: center; /* Центрируем текст */
-}
-
-nav {
-    display: flex;
-    justify-content: center; /* Центрируем навигацию */
-    margin-bottom: 20px;
-}
-
+/* Навигация */
 nav ul {
-    list-style: none;
     display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -42,80 +30,170 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ecf0f1;
     text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.2s; /* Анимация цвета и масштабирования */
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #e67e22; /* Цвет при наведении */
-    transform: scale(1.1); /* Увеличиваем размер ссылки */
+    color: #ff7f50;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin: 10px 0;
+/* Шапка */
+header {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+header .cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: #ff7f50;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+header .cta:hover {
+    background: #ff5f50;
+    transform: scale(1.05);
+}
+
+/* Основное содержимое */
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+main .card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+main .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
-    font-size: 2rem;
-    margin: 20px 0 10px; /* Добавляем отступы */
+    margin-top: 0;
+    font-weight: 700;
 }
 
-p {
-    margin: 15px 0;
-    font-size: 1rem; /* Размер шрифта для параграфов */
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Кнопка "Связаться с нами" */
-.cta {
-    display: inline-block;
-    background: #e67e22; /* Цвет кнопки */
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s, transform 0.2s; /* Анимация кнопки */
+ul li {
+    padding: 10px 0;
 }
 
-.cta:hover {
-    background: #d35400; /* Темнее цвет кнопки при наведении */
-    transform: scale(1.05); /* Увеличиваем кнопку */
+/* Футер */
+footer {
+    background: #333;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-/* Стили для секций */
-main {
-    padding: 20px 0; /* Добавляем отступы для основного контента */
+footer form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
 }
 
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background: #fff; /* Цвет фона для секций */
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Тень для секций */
+footer form label {
+    margin-bottom: 5px;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column; /* Переключаем на столбец для мобильных устройств */
+footer form input, footer form textarea {
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+footer form button {
+    padding: 15px 30px;
+    background: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.3s;
+}
+
+footer form button:hover {
+    background: #ff5f50;
+    transform: scale(1.05);
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
     }
-    
-    nav ul li {
-        margin: 10px 0;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    h1 {
-        font-size: 2rem; /* Уменьшаем размер заголовка на мобильных */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
-
-    h2 {
-        font-size: 1.5rem; /* Уменьшаем размер подзаголовка на мобильных */
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    .cta {
-        font-size: 1rem; /* Уменьшаем размер кнопки на мобильных */
+/* Медиазапросы */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
